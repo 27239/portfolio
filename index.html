@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- ✅ Updated Header with Left-Aligned Name -->
+    <header style="padding: 20px;">
+        <div style="text-align: left;">
+            <h1 style="margin: 0; font-size: 2.5em;">Mokariya Yagnesh</h1>
+            <p style="margin: 5px 0 0; font-size: 1.1em;">Data Analyst | SQL | Python | Power BI | Excel</p>
+        </div>
+    </header>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <a href="#home" onclick="toggleMenu()">Home </a>
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#education" onclick="toggleMenu()">Education</a>
+        <a href="#project" onclick="toggleMenu()">Projects</a>
+        <a href="#resume" onclick="toggleMenu()">Resume</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    </header>
+
+    <section id="home">
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
+            <div class="image-container" style="flex: 1 1 200px; max-width: 250px;">
+                <div class="circle-border"></div>
+                <img src="photo.jpg" class="profile-image" style="width: 100%; height: auto; border-radius: 10px;"
+                    alt="Profile photo">
+
+            </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        </div>
+        <div style="flex: 2 1 300px;">
+            <p>I'm a data analyst with experience in transforming data into actionable insights using SQL, Python,
+                Excel, and BI tools. Passionate about solving problems and optimizing business decisions.</p>
+        </div>
+        </div>
+    </section>
+
+    <section id="college-journey">
+        <h2>College Journey</h2>
+        <p>I pursued my degree in <strong>Bachelor of Computer Science</strong> from <strong>Government Engineering
+                College, Rajkot</strong>. During my academic years, I built a solid foundation in data analysis,
+            statistics, and programming. My interest in analytics grew through coursework and hands-on project
+            experiences.</p>
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <a href="cv.docx" download="">
+            <button type="button">📄 Download My Resume</button>
+        </a>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Sales Dashboard (Power BI):</strong> Interactive report tracking KPIs, sales trends, and
+                regional performance.</li>
+            <li><strong>Customer Churn Analysis:</strong> Logistic regression in Python to predict customer churn using
+                telecom data.</li>
+            <li><strong>SQL Retail Analysis:</strong> Data insights from 1M+ rows using complex queries and joins.</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="social-links">
+            <i class="fas fa-envelope"></i> Email: <a href="mailto:mokariyay5@gmail.com"
+                class="social-icon">mokariyay5@gmail.com</a>
+            <br>
+
+            <a href="https://www.linkedin.com/in/mokariya-yagnesh" target="_blank" class="social-icon linkedin"
+                title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/27239" target="_blank" class="social-icon github" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://instagram.com/yagnesh_mokariya" target="_blank" class="social-icon instagram"
+                title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Thank You</p>
+    </footer>
+
+    <!-- ✅ JavaScript for Dropdown Navigation -->
+
+</body>
+
+</html>
