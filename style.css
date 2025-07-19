@@ -61,6 +61,7 @@
        text-align: center;
        font-size: 1.1em;
        animation: fadeIn 1.4s ease-in;
+       color: black;
    }
 
    /* Section Styling */
