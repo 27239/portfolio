@@ -14,10 +14,11 @@
 
 <body>
     <!-- ✅ Updated Header with Left-Aligned Name -->
-    <header style="padding: 20px; text-align: center;">
-        <div style="text-align: center;">
-            <h1 style="margin: 15px; font-size: 2.5em;">Mokariya Yagnesh</h1>
-            <p style="margin: 5px 0 0; font-size: 1.1em;">Data Analyst | SQL | Python | Power BI | Excel</p>
+    <header style="padding: 20px;">
+        <div>
+            <h1 style="margin: 15px; font-size: 2.5em; text-align: center;">Mokariya Yagnesh</h1>
+            <p style="margin: 5px 0 0; font-size: 1.1em;text-align: center;">Data Analyst | SQL | Python | Power BI |
+                Excel</p>
         </div>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </header>
@@ -38,16 +39,26 @@
     <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
     <div id="typewriter"></div>
+    <p id="text" style="text-align: center;"><strong>Hello, I'm Yagnesh 👋</strong></p>
 
 
     <section id="home">
         <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
-            <div class="image-container" style="flex: 1 1 200px; max-width: 250px;">
-                <div class="circle-border"></div>
-                <img src="photo.jpg" class="profile-image" style="width: 100%; height: auto; border-radius: 10px;"
-                    alt="Profile photo">
+            <div class="image-container" style="flex: 1 1 200px; max-width: 250px;" onclick="flipCard(this)">
+                <div class="flip-inner">
+                    <div class="flip-front">
 
+                        <img src="photo.jpg" class="profile-image"
+                            style="width: 100%; height: auto; border-radius: 10px;" alt="flip-inner">
+
+                    </div>
+                    <div class="flip-back">
+                        <img src="photo.jpg" class="profile-image"
+                            style="width: 100%; height: auto; border-radius: 10px;" alt="flip-back">
+                    </div>
+                </div>
             </div>
+
     </section>
 
     <section id="about">
@@ -62,7 +73,7 @@
     </section>
 
     <section id="education">
-        <h2>College Journey</h2>
+        <h2>Education</h2>
         <p>I pursued my degree in <strong>Bachelor of Computer Science</strong> from <strong>Government Engineering
                 College, Rajkot</strong>. During my academic years, I built a solid foundation in data analysis,
             statistics, and programming. My interest in analytics grew through coursework and hands-on project

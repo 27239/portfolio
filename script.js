@@ -11,7 +11,11 @@ function toggleMenu() {
     sidebar.classList.toggle('active');
     overlay.classList.toggle('active');
 }
-const text = "Hello, I'm Yagnesh 👋";  // You can change this
+function flipCard(element) {
+    element.classList.toggle('flipped');
+}
+
+const text = document.getElementById(text)  // You can change this
 const speed = 100; // typing speed in ms
 let i = 0;
 
@@ -24,4 +28,5 @@ function typeWriter() {
 }
 
 window.onload = typeWriter;
+
 

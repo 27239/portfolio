@@ -1,113 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Fully Hidden Toggle Menu</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flip Image on Click</title>
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
     }
 
-    /* Toggle Button */
-    .menu-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1001;
-      background-color: #333;
-      color: #fff;
-      padding: 10px 15px;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    /* Sidebar Menu */
-    .sidebar {
-      position: fixed;
-      top: 0;
-      right: 0;
+    .photo-flip {
       width: 250px;
-      height: 100%;
-      background-color: #444;
-      color: white;
-      padding: 20px;
-      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-      z-index: 1000;
+      height: 250px;
+      perspective: 1000px;
+      cursor: pointer;
     }
 
-    .sidebar.active {
-      transform: translateX(0%);
-    }
-
-    .sidebar h2 {
-      margin-top: 0;
-    }
-
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .sidebar ul li {
-      padding: 10px 0;
-      border-bottom: 1px solid #666;
-    }
-
-    .sidebar ul li a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
+    .flip-inner {
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.4);
-      display: none;
-      z-index: 999;
+      position: relative;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
     }
 
-    .overlay.active {
-      display: block;
+    .flip-front,
+    .flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .flip-front img,
+    .flip-back img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flip-back {
+      transform: rotateY(180deg);
+    }
+
+    .flipped .flip-inner {
+      transform: rotateY(180deg);
     }
   </style>
 </head>
+
 <body>
 
-<!-- Toggle Button -->
-<button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  <div class="photo-flip" onclick="flipCard(this)">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <img src="photo.jpg" alt="Front Image">
+      </div>
+      <div class="flip-back">
+        <img src="photo.jpg" alt="Back Image">
+      </div>
+    </div>
+  </div>
 
-<!-- Sidebar Menu -->
-<div class="sidebar" id="sidebar">
-  <h2>Menu</h2>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Education</a></li>
-    <li><a href="#">Projects</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</div>
-
-<!-- Overlay -->
-<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
-
-<!-- Script -->
-<script>
-  function toggleMenu() {
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    sidebar.classList.toggle('active');
-    overlay.classList.toggle('active');
-  }
-</script>
+  <script>
+    function flipCard(element) {
+      element.classList.toggle('flipped');
+    }
+  </script>
 
 </body>
+
 </html>

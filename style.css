@@ -51,14 +51,13 @@
        margin: 10px 0;
        font-size: 2.2em;
        animation: fadeIn 1.2s ease-in;
-       text-align: center;
        color: black;
 
 
    }
 
    header p {
-       text-align: center;
+
        font-size: 1.1em;
        animation: fadeIn 1.4s ease-in;
        color: black;
@@ -90,13 +89,15 @@
    .profile-image {
        width: 100%;
        height: 100%;
-       border-radius: 50%;
+       border-radius: 0;
        object-fit: cover;
        position: relative;
        z-index: 2;
        border: 5px solid black;
        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
    }
+
+
 
    .sidebar {
        position: fixed;
@@ -163,6 +164,57 @@
        cursor: pointer;
        border-radius: 5px;
    }
+
+   .photo-flip {
+       width: 250px;
+       height: 250px;
+       perspective: 1000px;
+       margin: auto;
+       cursor: pointer;
+   }
+
+   .flip-inner {
+       width: 100%;
+       height: 100%;
+       position: relative;
+       transition: transform 0.8s;
+       transform-style: preserve-3d;
+   }
+
+   .flip-front,
+   .flip-back {
+       position: absolute;
+       width: 250px;
+       height: 250px;
+       backface-visibility: hidden;
+       border-radius: 0;
+       overflow: hidden;
+   }
+
+   .flip-front img,
+   .flip-back img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+   }
+
+   .flip-back {
+       transform: rotateY(180deg);
+   }
+
+   .flipped .flip-inner {
+       transform: rotateY(180deg);
+   }
+
+   p {
+       margin: 5px 0 0;
+       font-size: 1.1em;
+       color: #333;
+   }
+
+
+
+
 
    /* Resume Button */
    button {
@@ -313,6 +365,8 @@
            border-color: #00ffcc;
        }
    }
+
+
 
    @media (max-width: 280px) {
        .sidebar {
