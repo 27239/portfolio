@@ -14,27 +14,31 @@
 
 <body>
     <!-- ✅ Updated Header with Left-Aligned Name -->
-    <header style="padding: 20px;">
-        <div style="text-align: left;">
+    <header style="padding: 20px; text-align: center;">
+        <div style="text-align: center;">
             <h1 style="margin: 0; font-size: 2.5em;">Mokariya Yagnesh</h1>
             <p style="margin: 5px 0 0; font-size: 1.1em;">Data Analyst | SQL | Python | Power BI | Excel</p>
         </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </header>
 
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
     <!-- Sidebar Menu -->
-    <div class="sidebar" id="sidebar">
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <a href="#home" onclick="toggleMenu()">Home </a>
-        <a href="#about" onclick="toggleMenu()">About</a>
-        <a href="#education" onclick="toggleMenu()">Education</a>
-        <a href="#project" onclick="toggleMenu()">Projects</a>
-        <a href="#resume" onclick="toggleMenu()">Resume</a>
-        <a href="#contact" onclick="toggleMenu()">Contact</a>
-    </div>
-
+    <header>
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="#home" onclick="toggleMenu()">Home </a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+                <li><a href="#project" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#resume" onclick="toggleMenu()">Resume</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
     </header>
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <div id="typewriter"></div>
+
 
     <section id="home">
         <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
@@ -77,9 +81,11 @@
         <ul>
             <li><strong>Sales Dashboard (Power BI):</strong> Interactive report tracking KPIs, sales trends, and
                 regional performance.</li>
-            <li><strong>Customer Churn Analysis:</strong> Logistic regression in Python to predict customer churn using
+            <li><strong>Customer Churn Analysis:</strong> Logistic regression in Python to predict customer churn
+                using
                 telecom data.</li>
-            <li><strong>SQL Retail Analysis:</strong> Data insights from 1M+ rows using complex queries and joins.</li>
+            <li><strong>SQL Retail Analysis:</strong> Data insights from 1M+ rows using complex queries and joins.
+            </li>
         </ul>
     </section>
 

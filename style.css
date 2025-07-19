@@ -1,311 +1,385 @@
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
+   * {
+       box-sizing: border-box;
+   }
 
-/* Header with fade-in animation */
-header {
-    background-color: white;
-    color: white;
-    text-align: center;
-    padding: 30px 15px;
-    animation: fadeInDown 1s ease-out;
-}
+   /* General Styling */
+   body {
+       font-family: Arial, sans-serif;
+       margin: 0;
+       padding: 0;
+       line-height: 1.6;
+       background-color: #f9f9f9;
+       color: #333;
+       transition: background-color 0.5s ease, color 0.5s ease;
+   }
 
-header h1 {
-    margin: 20px 0;
-    font-size: 2.2em;
-    animation: fadeIn 1.2s ease-in;
-    text-align: center;
-    color: black;
+   #typewriter {
+       white-space: nowrap;
+       overflow: hidden;
+       border-right: 2px solid #00ffcc;
+       width: fit-content;
+       animation: blink 0.7s infinite;
+       font-weight: bold;
+       /* Make text bold */
+       margin: 0 auto;
+       /* Center the element horizontally */
+       display: block;
+       /* Needed for margin auto to work if it's a span */
+       text-align: center;
 
-}
+   }
 
-header p {
-    text-align: center;
-    font-size: 1.1em;
-    animation: fadeIn 1.4s ease-in;
-}
+   /* Header with fade-in animation */
+   header {
+       background-color: white;
+       color: white;
+       text-align: center;
+       padding: 30px 15px;
+       animation: fadeInDown 1s ease-out;
+       display: flex;
+       justify-content: space-between;
+       z-index: 1001;
+       position: relative;
+   }
 
-/* Section Styling */
-section {
-    padding: 20px 15px;
-    max-width: 900px;
-    margin: 0 auto;
-    animation: fadeInUp 0.8s ease;
-}
+   .logo {
+       font-size: 20px;
+       white-space: nowrap;
+   }
 
-h2 {
-    color: #0077b5;
-    margin-top: 30px;
-    font-size: 1.6em;
-    transition: color 0.3s ease;
-}
+   header h1 {
+       margin: 10px 0;
+       font-size: 2.2em;
+       animation: fadeIn 1.2s ease-in;
+       text-align: center;
+       color: black;
 
-.image-container {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 20px auto;
-}
 
-.profile-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    position: relative;
-    z-index: 2;
-    border: 5px solid black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+   }
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    /* 👈 was right: 0 */
-    width: 200px;
-    background-color: #333;
-    padding: 20px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    transition: transform 0.3s ease;
-    transform: translateX(-100%);
-    /* 👈 hide it by default */
-    z-index: 999;
-}
+   header p {
+       text-align: center;
+       font-size: 1.1em;
+       animation: fadeIn 1.4s ease-in;
+   }
 
-.sidebar.active {
-    transform: translateX(0);
-    /* 👈 slide in when active */
-}
+   /* Section Styling */
+   section {
+       padding: 20px 15px;
+       max-width: 900px;
+       margin: 0 auto;
+       animation: fadeInUp 0.8s ease;
+   }
 
-.menu-toggle {
-    display: block;
-    font-size: 2em;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 2000;
-    background: none;
-    border: none;
-    color: #333;
-    cursor: pointer;
-}
+   h2 {
+       color: #0077b5;
+       margin-top: 30px;
+       font-size: 1.6em;
+       transition: color 0.3s ease;
+   }
 
-/* Resume Button */
-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #0077b5;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    margin-top: 10px;
-}
+   .image-container {
+       position: relative;
+       width: 200px;
+       height: 200px;
+       margin: 20px auto;
 
-button:hover {
-    background-color: #005582;
-    transform: scale(1.05);
-}
+   }
 
-/* Image Styling with zoom on hover */
-img {
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
+   .profile-image {
+       width: 100%;
+       height: 100%;
+       border-radius: 50%;
+       object-fit: cover;
+       position: relative;
+       z-index: 2;
+       border: 5px solid black;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   }
 
-img:hover {
-    transform: scale(1.03);
-}
+   .sidebar {
+       position: fixed;
+       top: 0;
+       right: 0;
+       width: 250px;
+       height: 100%;
+       background-color: #444;
+       color: white;
+       padding: 20px;
+       box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+       transform: translateX(100%);
+       transition: transform 0.3s ease;
+       z-index: 1000;
+   }
 
-/* Social Media Icons Section */
-.social-links {
-    margin-top: 15px;
-    text-align: center;
-}
+   .sidebar.active {
+       transform: translateX(0%);
+   }
 
-.social-icon {
-    font-size: 20px;
-    text-decoration: none;
-    margin: 0 10px;
-    display: inline-block;
-    color: #333;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
+   .sidebar h2 {
+       margin-top: 0;
+   }
 
-.social-icon i {
-    margin-right: 8px;
-}
+   .sidebar ul {
+       list-style: none;
+       padding: 0;
+   }
 
-.social-icon:hover {
-    transform: translateY(-3px);
-}
+   .sidebar ul li {
+       padding: 10px 0;
+       border-bottom: 1px solid #666;
+   }
 
-.social-icon.linkedin:hover {
-    color: #0077b5;
-}
+   .sidebar ul li a {
+       color: white;
+       text-decoration: none;
+   }
 
-.social-icon.github:hover {
-    color: #24292e;
-}
+   .overlay {
+       position: fixed;
+       top: 0;
+       d: 0;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(0, 0, 0, 0.4);
+       display: none;
+       z-index: 999;
+   }
 
-/* Footer */
-footer {
-    background-color: white;
-    color: black;
-    text-align: center;
-    padding: 15px 10px;
-    margin-top: 40px;
-    animation: fadeInUp 1.5s ease;
-    font-size: 0.9em;
-}
+   .overlay.active {
+       display: block;
+   }
 
-/* ================= Animations ================== */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+   .menu-toggle {
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       z-index: 1001;
+       background-color: #333;
+       color: #fff;
+       padding: 10px 15px;
+       border: none;
+       cursor: pointer;
+       border-radius: 5px;
+   }
 
-    to {
-        opacity: 1;
-    }
-}
+   /* Resume Button */
+   button {
+       padding: 10px 20px;
+       font-size: 1em;
+       background-color: #0077b5;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+       transition: transform 0.3s ease, background-color 0.3s ease;
+       margin-top: 10px;
+   }
 
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
+   button:hover {
+       background-color: #005582;
+       transform: scale(1.05);
+   }
 
-    100% {
-        transform: rotate(360deg);
-    }
-}
+   /* Image Styling with zoom on hover */
+   img {
+       border-radius: 10px;
+       transition: transform 0.3s ease;
+       max-width: 100%;
+       height: auto;
+       display: block;
+       margin: 0 auto;
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+   }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+   img:hover {
+       transform: scale(1.03);
+   }
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
+   /* Social Media Icons Section */
+   .social-links {
+       margin-top: 15px;
+       text-align: center;
+   }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+   .social-icon {
+       font-size: 20px;
+       text-decoration: none;
+       margin: 0 10px;
+       display: inline-block;
+       color: #333;
+       transition: color 0.3s ease, transform 0.3s ease;
+   }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
+   .social-icon i {
+       margin-right: 8px;
+   }
 
-    to {
-        width: 17ch;
-    }
+   .social-icon:hover {
+       transform: translateY(-3px);
+   }
 
-    /* adjust to character length of your name */
-}
+   .social-icon.linkedin:hover {
+       color: #0077b5;
+   }
 
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
+   .social-icon.github:hover {
+       color: #24292e;
+   }
 
-@media (max-width: 768px) {
-    .sidebar {
-        transform: translateX(100%);
-    }
+   /* Footer */
+   footer {
+       background-color: white;
+       color: black;
+       text-align: center;
+       padding: 15px 10px;
+       margin-top: 40px;
+       animation: fadeInUp 1.5s ease;
+       font-size: 0.9em;
+   }
 
-    .sidebar.active {
-        transform: translateX(0);
-    }
+   /* ================= Animations ================== */
+   @keyframes fadeIn {
+       from {
+           opacity: 0;
+       }
 
-    .menu-toggle {
-        display: block;
-    }
-}
+       to {
+           opacity: 1;
+       }
+   }
 
-/* ========== Responsive Design ========== */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
+   @keyframes rotate {
+       0% {
+           transform: rotate(0deg);
+       }
 
-    header p {
-        font-size: 1em;
-    }
+       100% {
+           transform: rotate(360deg);
+       }
+   }
 
-    h2 {
-        font-size: 1.4em;
-    }
+   @keyframes fadeInUp {
+       from {
+           opacity: 0;
+           transform: translateY(20px);
+       }
 
-    button {
-        width: 100%;
-        font-size: 1em;
-    }
+       to {
+           opacity: 1;
+           transform: translateY(0);
+       }
+   }
 
-    .social-icon {
-        font-size: 18px;
-        margin: 0 8px;
-    }
+   @keyframes fadeInDown {
+       from {
+           opacity: 0;
+           transform: translateY(-20px);
+       }
 
-    section {
-        padding: 15px 10px;
-    }
+       to {
+           opacity: 1;
+           transform: translateY(0);
+       }
+   }
 
-    footer {
-        font-size: 0.85em;
-    }
-}
+   @keyframes typing {
+       from {
+           width: 0;
+       }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.6em;
-    }
+       to {
+           width: 17ch;
+       }
 
-    header p {
-        font-size: 0.95em;
-    }
+       /* adjust to character length of your name */
+   }
 
-    h2 {
-        font-size: 1.2em;
-    }
+   @keyframes blink {
+       50% {
+           border-color: transparent;
+       }
+   }
 
-    button {
-        font-size: 0.95em;
-        padding: 10px;
-    }
+   @keyframes blink {
 
-    .social-icon {
-        font-size: 16px;
-        margin: 0 6px;
-    }
-}
+       0%,
+       100% {
+           border-color: transparent;
+       }
+
+       50% {
+           border-color: #00ffcc;
+       }
+   }
+
+   @media (max-width: 280px) {
+       .sidebar {
+           transform: translateX(100%);
+       }
+
+       .sidebar.active {
+           transform: translateX(0);
+       }
+
+       .menu-toggle {
+           display: block;
+       }
+   }
+
+   /* ========== Responsive Design ========== */
+   @media (max-width: 280px) {
+       header h1 {
+           font-size: 2em;
+       }
+
+       header p {
+           font-size: 1em;
+       }
+
+       h2 {
+           font-size: 1.4em;
+       }
+
+       button {
+           width: 100%;
+           font-size: 1em;
+       }
+
+       .social-icon {
+           font-size: 18px;
+           margin: 0 8px;
+       }
+
+       section {
+           padding: 15px 10px;
+       }
+
+       footer {
+           font-size: 0.85em;
+       }
+   }
+
+   @media (max-width: 280px) {
+       header h1 {
+           font-size: 1.6em;
+       }
+
+       header p {
+           font-size: 0.95em;
+       }
+
+       h2 {
+           font-size: 1.2em;
+       }
+
+       button {
+           font-size: 0.95em;
+           padding: 10px;
+       }
+
+       .social-icon {
+           font-size: 16px;
+           margin: 0 6px;
+       }
+   }
