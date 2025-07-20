@@ -265,7 +265,7 @@
    }
 
    .social-icon i {
-       margin-right: 8px;
+       margin-left: 8px;
    }
 
    .social-icon:hover {
@@ -278,6 +278,69 @@
 
    .social-icon.github:hover {
        color: #24292e;
+   }
+
+   .skills-section {
+       max-width: 600px;
+       margin: auto;
+   }
+
+   h2 {
+       text-align: center;
+       margin-bottom: 30px;
+   }
+
+   .skill {
+       margin-bottom: 20px;
+   }
+
+   .skill-name {
+       margin-bottom: 5px;
+       font-weight: bold;
+   }
+
+   .progress-bar {
+       height: 20px;
+       background: #ddd;
+       border-radius: 10px;
+       overflow: hidden;
+   }
+
+   .progress {
+       height: 100%;
+       text-align: right;
+       padding-right: 10px;
+       line-height: 20px;
+       color: white;
+       font-size: 12px;
+       border-radius: 10px;
+   }
+
+   .html {
+       width: 90%;
+       background-color: #e44d26;
+   }
+
+   .css {
+       width: 80%;
+       background-color: #264de4;
+   }
+
+   .javascript {
+       width: 70%;
+       background-color: #f0db4f;
+       color: #000;
+   }
+
+   .python {
+       width: 85%;
+       background-color: #306998;
+   }
+
+   .react {
+       width: 65%;
+       background-color: #61DBFB;
+       color: #000;
    }
 
    /* Footer */

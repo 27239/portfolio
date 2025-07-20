@@ -1,79 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <title>Flip Image on Click</title>
+  <title>My Skills</title>
   <style>
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f4f4f4;
     }
 
-    .photo-flip {
-      width: 250px;
-      height: 250px;
-      perspective: 1000px;
-      cursor: pointer;
+    .skills-section {
+      max-width: 600px;
+      margin: auto;
     }
 
-    .flip-inner {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
     }
 
-    .flip-front,
-    .flip-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 50%;
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill-name {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .progress-bar {
+      height: 20px;
+      background: #ddd;
+      border-radius: 10px;
       overflow: hidden;
     }
 
-    .flip-front img,
-    .flip-back img {
-      width: 100%;
+    .progress {
       height: 100%;
-      object-fit: cover;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      color: white;
+      font-size: 12px;
+      border-radius: 10px;
     }
 
-    .flip-back {
-      transform: rotateY(180deg);
-    }
-
-    .flipped .flip-inner {
-      transform: rotateY(180deg);
-    }
+    .html { width: 90%; background-color: #e44d26; }
+    .css { width: 80%; background-color: #264de4; }
+    .javascript { width: 70%; background-color: #f0db4f; color: #000; }
+    .python { width: 85%; background-color: #306998; }
+    .react { width: 65%; background-color: #61DBFB; color: #000; }
   </style>
 </head>
-
 <body>
 
-  <div class="photo-flip" onclick="flipCard(this)">
-    <div class="flip-inner">
-      <div class="flip-front">
-        <img src="photo.jpg" alt="Front Image">
+  <div class="skills-section">
+    <h2>My Skills</h2>
+
+    <div class="skill">
+      <div class="skill-name">HTML</div>
+      <div class="progress-bar">
+        <div class="progress html">90%</div>
       </div>
-      <div class="flip-back">
-        <img src="photo.jpg" alt="Back Image">
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">CSS</div>
+      <div class="progress-bar">
+        <div class="progress css">80%</div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">JavaScript</div>
+      <div class="progress-bar">
+        <div class="progress javascript">70%</div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">Python</div>
+      <div class="progress-bar">
+        <div class="progress python">85%</div>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">React</div>
+      <div class="progress-bar">
+        <div class="progress react">65%</div>
       </div>
     </div>
   </div>
 
-  <script>
-    function flipCard(element) {
-      element.classList.toggle('flipped');
-    }
-  </script>
-
 </body>
-
 </html>
