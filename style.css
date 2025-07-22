@@ -1,6 +1,5 @@
    * {
        box-sizing: border-box;
-       text-align: center;
    }
 
    /* General Styling */
@@ -154,9 +153,8 @@
    }
 
    .menu-toggle {
-       margin-top: -15px;
        position: fixed;
-       top: 20px;
+       top: -25px;
        right: 20px;
        z-index: 1001;
        background-color: #333;
