@@ -1,10 +1,12 @@
    * {
        box-sizing: border-box;
+       text-align: center;
    }
 
    /* General Styling */
    body {
        font-family: Arial, sans-serif;
+       text-align: center;
        margin: 0;
        padding: 0;
        line-height: 1.6;
@@ -14,18 +16,13 @@
    }
 
    #typewriter {
+       display: inline-block;
+       font-weight: bold;
+       font-size: 24px;
        white-space: nowrap;
        overflow: hidden;
        border-right: 2px solid #00ffcc;
-       width: fit-content;
        animation: blink 0.7s infinite;
-       font-weight: bold;
-       /* Make text bold */
-       margin: 0 auto;
-       /* Center the element horizontally */
-       display: block;
-       /* Needed for margin auto to work if it's a span */
-       text-align: center;
 
    }
 
@@ -37,15 +34,19 @@
        padding: 30px 15px;
        animation: fadeInDown 1s ease-out;
        display: flex;
-       justify-content: space-between;
+       justify-content: center;
        z-index: 1001;
        position: relative;
    }
+
+
 
    .logo {
        font-size: 20px;
        white-space: nowrap;
    }
+
+
 
    header h1 {
        margin: 10px 0;
@@ -411,24 +412,6 @@
        }
    }
 
-   @keyframes typing {
-       from {
-           width: 0;
-       }
-
-       to {
-           width: 17ch;
-       }
-
-       /* adjust to character length of your name */
-   }
-
-   @keyframes blink {
-       50% {
-           border-color: transparent;
-       }
-   }
-
    @keyframes blink {
 
        0%,
@@ -440,6 +423,9 @@
            border-color: #00ffcc;
        }
    }
+
+
+
 
 
 

@@ -15,8 +15,8 @@ function flipCard(element) {
     element.classList.toggle('flipped');
 }
 
-const text = document.getElementById(text)  // You can change this
-const speed = 100; // typing speed in ms
+const text = "Hello, I'm Yagnesh 👋";
+const speed = 70;
 let i = 0;
 
 function typeWriter() {
@@ -26,6 +26,8 @@ function typeWriter() {
         setTimeout(typeWriter, speed);
     }
 }
+
+
 
 window.onload = typeWriter;
 
