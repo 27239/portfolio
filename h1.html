@@ -1,98 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>My Skills</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f4f4f4;
+      background-color: #f0f0f0;
     }
 
-    .skills-section {
-      max-width: 600px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .skill {
-      margin-bottom: 20px;
-    }
-
-    .skill-name {
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-
-    .progress-bar {
-      height: 20px;
-      background: #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .progress {
-      height: 100%;
-      text-align: right;
-      padding-right: 10px;
-      line-height: 20px;
+    /* ✅ This will center the button horizontally */
+    .resume-button {
+      display: block;              /* Important for margin: auto to work */
+      margin: 100px auto 0 auto;   /* Top, Right, Bottom, Left */
+      padding: 10px 25px;
+      
+      font-size: 1em;
+      background-color: #0077b5;
       color: white;
-      font-size: 12px;
-      border-radius: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
-    .html { width: 90%; background-color: #e44d26; }
-    .css { width: 80%; background-color: #264de4; }
-    .javascript { width: 70%; background-color: #f0db4f; color: #000; }
-    .python { width: 85%; background-color: #306998; }
-    .react { width: 65%; background-color: #61DBFB; color: #000; }
+    .resume-button:hover {
+      background-color: #005582;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
 
-  <div class="skills-section">
-    <h2>My Skills</h2>
-
-    <div class="skill">
-      <div class="skill-name">HTML</div>
-      <div class="progress-bar">
-        <div class="progress html">90%</div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-name">CSS</div>
-      <div class="progress-bar">
-        <div class="progress css">80%</div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-name">JavaScript</div>
-      <div class="progress-bar">
-        <div class="progress javascript">70%</div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-name">Python</div>
-      <div class="progress-bar">
-        <div class="progress python">85%</div>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="skill-name">React</div>
-      <div class="progress-bar">
-        <div class="progress react">65%</div>
-      </div>
-    </div>
-  </div>
+  <button class="resume-button">Resume</button>
 
 </body>
 </html>
