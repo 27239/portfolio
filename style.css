@@ -293,6 +293,11 @@
    }
 
    .skills-section {
+       border: 3px solid #090a09;
+       border-radius: 15px;
+       padding: 20px;
+       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+       font-weight: bold;
        max-width: 600px;
        margin: auto;
    }
